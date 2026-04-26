@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ejercitación 4</title>
+	<style>
+		body {
+			font-family: "Times New Roman", Times, serif;
+			color: #111;
+			background: #fff;
+			margin: 0;
+			padding: 0;
+		}
+
+		.page {
+			max-width: 720px;
+			margin: 0 auto;
+			padding: 18px 16px 28px;
+		}
+
+		h1 {
+			font-size: 22px;
+			margin: 0 0 18px;
+			font-weight: 700;
+		}
+
+		.top-note {
+			margin: 0 0 18px;
+			font-size: 16px;
+		}
+
+		.frame {
+			border: 1px solid #7f7f7f;
+			padding: 10px 10px 14px;
+		}
+
+		.banner {
+			display: flex;
+			align-items: flex-start;
+			gap: 12px;
+			padding-bottom: 10px;
+			border-bottom: 2px solid #666;
+		}
+
+		.image-link {
+			display: inline-flex;
+			align-items: center;
+			text-decoration: none;
+			color: inherit;
+		}
+
+		.logo-image {
+			width: 68px;
+			height: 68px;
+			object-fit: contain;
+			display: block;
+		}
+
+		.title-row {
+			display: flex;
+			align-items: center;
+			gap: 26px;
+			margin: 22px 0 16px;
+		}
+
+		.title-year {
+			font-size: 26px;
+			font-weight: 700;
+		}
+
+		.table-block {
+			display: flex;
+			gap: 26px;
+			align-items: flex-start;
+			margin-bottom: 18px;
+		}
+
+		table {
+			border-collapse: collapse;
+			font-size: 15px;
+		}
+
+		.result-table {
+			width: 385px;
+			border: 2px solid #999;
+			table-layout: fixed;
+		}
+
+		.result-table td,
+		.result-table th {
+			border: 1px solid #999;
+			padding: 2px 8px;
+			vertical-align: middle;
+		}
+
+		.result-table th {
+			text-align: center;
+		}
+
+		.result-table td {
+			text-align: center;
+		}
+
+		.result-table .col-izq {
+			width: 180px;
+			text-align: left;
+		}
+
+		.result-table .celda-fecha {
+			vertical-align: bottom;
+			padding-bottom: 6px;
+		}
+
+		.result-table .head {
+			font-weight: 700;
+			text-align: center;
+		}
+
+		.result-table .left {
+			width: 138px;
+			font-weight: 700;
+			text-align: center;
+		}
+
+		.result-table .right {
+			width: 247px;
+			text-align: center;
+		}
+
+		.list-section {
+			margin: 14px 0 20px 8px;
+		}
+
+		.list-section ol {
+			margin: 0;
+			padding-left: 22px;
+		}
+
+		.list-section a {
+			color: #1a4fb3;
+			text-decoration: underline;
+		}
+
+		.form-title {
+			margin: 20px 0 10px;
+			font-size: 16px;
+		}
+
+		.form-row {
+			display: flex;
+			align-items: flex-start;
+			gap: 12px;
+			margin-left: 14px;
+		}
+
+		.form-labels {
+			font-weight: 700;
+			text-align: right;
+			min-width: 80px;
+			line-height: 1.8;
+		}
+
+		.form-fields {
+			display: flex;
+			flex-direction: column;
+			gap: 4px;
+		}
+
+		input[type="email"],
+		textarea {
+			border: 1px solid #666;
+			font: inherit;
+			width: 150px;
+			box-sizing: border-box;
+		}
+
+		textarea {
+			width: 150px;
+			height: 70px;
+			resize: none;
+		}
+
+		.actions {
+			display: flex;
+			gap: 10px;
+			margin: 10px 0 0 92px;
+		}
+
+		button {
+			font: inherit;
+			font-weight: 700;
+			padding: 6px 14px;
+			border: 1px solid #777;
+			background: #efefef;
+			cursor: pointer;
+		}
+
+		.section-title {
+			margin: 18px 0 4px;
+			font-size: 18px;
+			font-weight: 700;
+		}
+
+		.text-block {
+			margin-left: 10px;
+			line-height: 1.5;
+		}
+
+		.contact {
+			margin-top: 18px;
+			font-size: 15px;
+		}
+
+		.contact a {
+			color: #1a4fb3;
+		}
+	</style>
+</head>
+<body>
+	<div class="page">
+		<h1>Ejercitación 4</h1>
+		<p class="top-note">Escribir el código HTML completo necesario para visualizar la siguiente salida en el navegador:</p>
+
+		<div class="frame">
+			<!-- Bloque superior con una imagen enlazada al sitio de la universidad -->
+			<div class="banner">
+				<a class="image-link" href="https://www.frro.utn.edu.ar/" target="_blank" rel="noopener noreferrer">
+					<img class="logo-image" src="Logo%20utn.png" alt="Logo UTN" />
+				</a>
+			</div>
+
+			<!-- Título principal del año -->
+			<div class="title-row">
+				<div class="title-year">AÑO 2026</div>
+			</div>
+
+			<!-- Tabla con la información de exámenes y la fecha de actualización -->
+			<div class="table-block">
+				<table class="result-table">
+					<tr>
+						<th colspan="2">Exámenes</th>
+					</tr>
+					<tr>
+						<td rowspan="2" style="width: 180px; text-align: left; vertical-align: bottom; padding-bottom: 5px;">
+							Fecha: <span id="fecha-actual"></span>
+						</td>
+						<td>Aprobados</td>
+					</tr>
+					<tr>
+						<td>24/30</td>
+					</tr>
+				</table>
+			</div>
+
+			<!-- Lista ordenada con un enlace interno y otro externo -->
+			<div class="list-section">
+				<ol>
+					<li><a href="#enunciado">Enunciado del examen</a></li>
+					<li><a href="https://www.google.com" target="_blank" rel="noopener noreferrer">Resolución</a></li>
+				</ol>
+			</div>
+
+			<!-- Formulario de consultas enviado por correo electrónico -->
+			<p class="form-title">Puede realizar consultas completando el siguiente formulario:</p>
+			<form action="mailto:xx@xx.com" method="post" enctype="text/plain">
+				<div class="form-row">
+					<div class="form-labels">
+						<div>e-mail:</div>
+						<div>consulta:</div>
+					</div>
+					<div class="form-fields">
+						<input type="email" name="email" />
+						<textarea name="consulta"></textarea>
+					</div>
+				</div>
+				<div class="actions">
+					<button type="submit">ENVIAR</button>
+					<button type="reset">BORRAR</button>
+				</div>
+			</form>
+
+			<!-- Sección del enunciado del examen -->
+			<h2 class="section-title" id="enunciado">Enunciado del examen</h2>
+			<div class="text-block">
+				<p>Ejercicio 1: ..................................</p>
+				<p>....................................................</p>
+				<p>Ejercicio 2: ..................................</p>
+			</div>
+
+			<!-- Enlace final a una dirección de correo electrónico -->
+			<p class="contact">Para más información dirigirse a <a href="mailto:contacto@xx.com">contacto@xx.com</a></p>
+		</div>
+	</div>
+
+	<script>
+		(function () {
+			var hoy = new Date();
+			var fechaFormateada = hoy.toLocaleDateString("es-AR", {
+				year: "numeric",
+				month: "2-digit",
+				day: "2-digit"
+			});
+			var destino = document.getElementById("fecha-actual");
+			if (destino) {
+				destino.textContent = fechaFormateada;
+			}
+		})();
+	</script>
+</body>
+</html>

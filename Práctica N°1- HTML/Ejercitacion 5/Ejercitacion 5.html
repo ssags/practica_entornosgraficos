@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ejercitacion 5 - Marcos</title>
+</head>
+
+<frameset rows="25%,55%,20%" frameborder="1" border="2" framespacing="0">
+	<frameset cols="65%,35%" frameborder="1" border="2" framespacing="0">
+		<frame src="encabezado.html" name="encabezado" title="Encabezado">
+		<frame src="logo.html" name="logo" title="Logo">
+	</frameset>
+
+	<frameset cols="33%,67%" frameborder="1" border="2" framespacing="0">
+		<frame src="menu.html" name="menu" title="Menu de navegacion">
+		<frame src="principal.html" name="principal" title="Contenido principal">
+	</frameset>
+
+	<frame src="pie.html" name="pie" title="Pie de pagina">
+
+	<noframes>
+		<body>
+			<p>Tu navegador no soporta marcos.</p>
+		</body>
+	</noframes>
+</frameset>
+
+</html>
