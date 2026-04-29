@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica 2 - Ejercicio 2: Estructura de Sitio Web + Componentes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="estilo.css">
+    <style>
+        .header {
+            background-color: #9b7bb4;
+            padding: 30px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            color: white;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        .sidebar {
+            background-color: #e8c9a1;
+            padding: 20px;
+            border-radius: 5px;
+            min-height: 400px;
+            margin-bottom: 15px;
+        }
+        
+        .card {
+            border: 1px solid #ddd;
+            margin-bottom: 15px;
+        }
+        
+        .card-img-top {
+            background-color: #8b8b8b;
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .carousel-inner {
+            background-color: #5a8bc9;
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+        
+        .carousel-item {
+            min-height: 200px;
+            display: flex !important;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body class="p-4">
+    <h2 class="mb-4">Práctica 3: Componentes</h2>
+    
+    <div class="container">
+        <!-- Encabezado -->
+        <div class="row mb-3">
+            <div class="col-12">
+                <div class="header">ENCABEZADO</div>
+            </div>
+        </div>
+
+        <!-- Contenido principal: Sidebar + Contenido -->
+        <div class="row">
+            <!-- Sidebar: tamaño 3 -->
+            <div class="col-12 col-md-3 col-lg-3">
+                <div class="sidebar">
+                    <h5>SIDEBAR</h5>
+                    <button class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#modalSidebar">
+                        Abrir Modal
+                    </button>
+                </div>
+            </div>
+
+            <!-- Contenido principal: tamaño 9 -->
+            <div class="col-12 col-md-9 col-lg-9">
+                <!-- Primera fila de contenido: Cards y Alerta -->
+                <div class="row mb-3">
+                    <div class="col-6 col-md-6">
+                        <div class="card">
+                            <div class="card-img-top">Imagen Cualquiera</div>
+                            <div class="card-body">
+                                <h5 class="card-title">Título</h5>
+                                <p class="card-text">Texto descriptivo</p>
+                                <a href="#" class="btn btn-primary">Link</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-6">
+                        <div class="alert alert-success" role="alert">
+                            ¡Alerta de éxito! Este es un componente de alerta con la clase alert-success.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Segunda fila de contenido: 2 Cards -->
+                <div class="row mb-3">
+                    <div class="col-6 col-md-6">
+                        <div class="card">
+                            <div class="card-img-top">Imagen Cualquiera</div>
+                            <div class="card-body">
+                                <h5 class="card-title">Título</h5>
+                                <p class="card-text">Texto descriptivo</p>
+                                <a href="#" class="btn btn-primary">Link</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-6">
+                        <div class="card">
+                            <div class="card-img-top">Imagen Cualquiera</div>
+                            <div class="card-body">
+                                <h5 class="card-title">Título</h5>
+                                <p class="card-text">Texto descriptivo</p>
+                                <a href="#" class="btn btn-primary">Link</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tercera fila de contenido: Carousel -->
+                <div class="row mb-3">
+                    <div class="col-12">
+                        <div id="carouselSlideshows" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    Imagen 1
+                                </div>
+                                <div class="carousel-item">
+                                    Imagen 2
+                                </div>
+                                <div class="carousel-item">
+                                    Imagen 3
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselSlideshows" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselSlideshows" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modalSidebar" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="modalLabel">Modal</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Contenido del modal
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary">Guardar cambios</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
