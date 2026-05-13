@@ -48,6 +48,36 @@ Repositorio de ejercicios de HTML para la materia de Entornos Gráficos.
 		- `Práctica 3: componentes.md`
 		- `formulario_contacto.html`
 
+- `Práctica Nº3 - PHP/`
+	- `PNº4 Introduccion a PHP/`
+		- `contador.php`
+		- `datos.php`
+		- `ejercicio 1 php.md`
+		- `ejercicio 2 php.md`
+		- `ejercicio 3 php.md`
+		- `ejercicio 4 php.md`
+		- `ejercicio 5 php.md`
+		- `ejercicio4.php`
+		- `visitas.php`
+		- `arrays y funciones/`
+			- `ejercicio 1 php ayf.md`
+			- `ejercicio 2 php ayf.md`
+			- `ejercicio 3 php ayf.md`
+			- `ejercicio 4 php ayf.md`
+			- `ejercicio4_prueba.php`
+	- `PNº5 función mail(), variables de sesión/`
+		- `cerrar_sesion.php`
+		- `contacto.php`
+		- `ejercicio 2 php2.md`
+		- `ejercicio 3 php2.md`
+		- `ejercicio 4 php2.md`
+		- `ejercicio1 php2.md`
+		- `enviar_correo_html.php`
+		- `inicio_sesion.php`
+		- `pagina2.php`
+		- `pagina3.php`
+		- `recomendar.php`
+
 ## Cómo visualizar los ejercicios
 
 1. Abrí los archivos `.html` directamente en el navegador.
