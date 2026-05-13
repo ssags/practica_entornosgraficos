@@ -51,6 +51,7 @@ Repositorio de ejercicios de HTML para la materia de Entornos Gráficos.
 - `Práctica Nº3 - PHP/`
 	- `PNº4 Introduccion a PHP/`
 		- `contador.php`
+		- `contador.dat`
 		- `datos.php`
 		- `ejercicio 1 php.md`
 		- `ejercicio 2 php.md`
